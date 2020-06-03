@@ -1,2 +1,0 @@
-# BusinessCardApplication
-Created with CodeSandbox
