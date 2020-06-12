@@ -13,7 +13,207 @@
 	</head>
 
 	<body>
-		<h1>Hello World!</h1>
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-12">
+					<h1>Business Card Designer</h1>
+				</div>
+			</div>
+			<div class="row">
+				<!-- INPUT -->
+				<div class="col-sm-12 col-md-6 input">
+					<form action="" id="cardInfo" class="form-horizontal">
+						<!-- INPUT COMPANY NAME -->
+						<div class="form-group">
+							<label
+								for="inputCompanyName"
+								class="col-sm-3 control-label"
+							>
+								Company Name:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="text"
+									id="inputCompanyName"
+									class="form-control"
+									onkeyup="printCompanyName()"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT COMPANY NAME -->
+
+						<!-- INPUT COMPANY MESSAGE -->
+						<div class="form-group">
+							<label
+								for="inputCompanyMessage"
+								class="col-sm-3 control-label"
+							>
+								Company Message:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="text"
+									id="inputCompanyMessage"
+									class="form-control"
+									onkeyup="printCompanyMessage()"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT COMPANY MESSAGE -->
+
+						<!-- INPUT BACKGROUND COLOR -->
+						<div class="form-group">
+							<label
+								for="inputBackgroundColor"
+								class="col-sm-3 control-label"
+							>
+								Background Color:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="color"
+									id="inputBackgroundColor"
+									class="form-control"
+									value="#FFFFFF"
+									onchange="printBackgroundColor()"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT BACKGROUND COLOR -->
+
+						<!-- INPUT TEXT COLOR -->
+						<div class="form-group">
+							<label
+								for="inputTextColor"
+								class="col-sm-3 control-label"
+							>
+								Text Color:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="color"
+									id="inputTextColor"
+									class="form-control"
+									value="#000000"
+									onchange="printTextColor()"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT TEXT COLOR -->
+
+						<!-- INPUT TEXT ALIGN -->
+						<div class="form-group">
+							<label class="col-sm-3 control-label">
+								Text Align:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="button"
+									id="text-left"
+									class="btn btn-default"
+									value="Left"
+									onclick="inputTextAlign(this.id)"
+								/>
+								<input
+									type="button"
+									id="text-center"
+									class="btn btn-default"
+									value="Center"
+									onclick="inputTextAlign(this.id)"
+								/>
+								<input
+									type="button"
+									id="text-right"
+									class="btn btn-default"
+									value="Right"
+									onclick="inputTextAlign(this.id)"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT TEXT ALIGN -->
+
+						<!-- INPUT YOUR NAME -->
+						<div class="form-group">
+							<label
+								for="inputYourName"
+								class="col-sm-3 control-label"
+							>
+								Your Name:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="text"
+									id="inputYourName"
+									class="form-control"
+									onkeyup="printYourName()"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT YOUR NAME -->
+
+						<!-- INPUT JOB TITLE -->
+						<div class="form-group">
+							<label
+								for="inputJobTitle"
+								class="col-sm-3 control-label"
+							>
+								Job Title:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="text"
+									id="inputJobTitle"
+									class="form-control"
+									onkeyup="printJobTitle()"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT JOB TITLE -->
+
+						<!-- INPUT EMAIL -->
+						<div class="form-group">
+							<label
+								for="inputEmail"
+								class="col-sm-3 control-label"
+							>
+								Email:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="email"
+									id="inputEmail"
+									class="form-control"
+									onkeyup="printEmail()"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT EMAIL -->
+
+						<!-- INPUT TELEPHONE NUMBER -->
+						<div class="form-group">
+							<label
+								for="inputTelephoneNumber"
+								class="col-sm-3 control-label"
+							>
+								Telephone Number:</label
+							>
+							<div class="col-sm-9">
+								<input
+									type="phone"
+									id="inputTelephoneNumber"
+									class="form-control"
+									onkeyup="printTelephoneNumber()"
+								/>
+							</div>
+						</div>
+						<!-- // INPUT TELEPHONE NUMBER -->
+					</form>
+				</div>
+
+				<!-- OUTPUT -->
+				<div class="col-sm-12 col-md-6 output">Test</div>
+			</div>
+		</div>
 
 		<script type="javascript" src="./scripts.js"></script>
 	</body>
