@@ -14,7 +14,7 @@
 
 	<body>
 		<div class="container-fluid">
-			<div class="row text-center">
+			<div class="row">
 				<div class="col-sm-12">
 					<h1>Business Card Designer</h1>
 				</div>
@@ -110,23 +110,23 @@
 								<input
 									type="button"
 									id="text-left"
-									class="btn btn-default"
+									class="btn btn-info"
 									value="Left"
-									onclick="inputTextAlign(this.id)"
+									onclick="printTextAlign(this.id)"
 								/>
 								<input
 									type="button"
 									id="text-center"
-									class="btn btn-default"
+									class="btn btn-info"
 									value="Center"
-									onclick="inputTextAlign(this.id)"
+									onclick="printTextAlign(this.id)"
 								/>
 								<input
 									type="button"
 									id="text-right"
-									class="btn btn-default"
+									class="btn btn-info"
 									value="Right"
-									onclick="inputTextAlign(this.id)"
+									onclick="printTextAlign(this.id)"
 								/>
 							</div>
 						</div>
@@ -199,7 +199,7 @@
 							>
 							<div class="col-sm-9">
 								<input
-									type="phone"
+									type="tel"
 									id="inputTelephoneNumber"
 									class="form-control"
 									onkeyup="printTelephoneNumber()"
@@ -213,6 +213,7 @@
 							<div class="col-sm-3 col-sm-offset-3">
 								<input
 									type="button"
+									class="btn btn-default"
 									value="Submit"
 									onclick="formSubmit()"
 								/>
@@ -220,6 +221,7 @@
 							<div class="col-sm-3">
 								<input
 									type="button"
+									class="btn btn-default"
 									value="Clear"
 									onclick="formReset()"
 								/>
@@ -234,15 +236,84 @@
 					<div id="card">
 						<h3 id="outputCompanyName">Company Name</h3>
 						<p id="outputCompanyMessage">Company Message</p>
+						<hr />
 						<p id="outputYourName" class="small">Your Name</p>
 						<p id="outputJobTitle" class="small">Job Title</p>
 						<p id="outputEmail" class="small">Email:</p>
-						<p id="outputTelephone" class="small">Tel:</p>
+						<p id="outputTelephoneNumber" class="small">Tel:</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="alert" class="alert alert-danger">
+						Test
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<script>
+			function printCompanyName() {
+				document.getElementById('outputCompanyName').innerHTML =
+					inputCompanyName.value;
+			}
+
+			function printCompanyMessage() {
+				document.getElementById('outputCompanyMessage').innerHTML =
+					inputCompanyMessage.value;
+			}
+
+			function printBackgroundColor() {
+				var bgColor = document.getElementById('inputBackgroundColor')
+					.value;
+				document.getElementById('card').style.background = bgColor;
+			}
+
+			function printTextColor() {
+				var textColor = document.getElementById('inputTextColor').value;
+				document.getElementById('card').style.color = textColor;
+			}
+
+			function printTextAlign(selected_id) {
+				document.getElementById('card').className = selected_id;
+			}
+
+			function printYourName() {
+				document.getElementById('outputYourName').innerHTML =
+					inputYourName.value;
+			}
+
+			function printJobTitle() {
+				document.getElementById('outputJobTitle').innerHTML =
+					inputJobTitle.value;
+			}
+
+			function printEmail() {
+				document.getElementById('outputEmail').innerHTML =
+					'Email: ' + inputEmail.value;
+			}
+
+			function printTelephoneNumber() {
+				document.getElementById('outputTelephoneNumber').innerHTML =
+					'Tel: ' + inputTelephoneNumber.value;
+			}
+
+			function formSubmit() {
+				if (
+					!inputCompanyName.value ||
+					!inputCompanyMessage ||
+					!inputYourName ||
+					!inputJobTitle ||
+					!inputEmail ||
+					!inputTelephoneNumber
+				) {
+					document.getElementById('alert').innerHTML =
+						'Please complete all required sections';
+					document.getElementById('alert').style.opacity = '1';
+				}
+			}
+		</script>
 		<script type="javascript" src="./scripts.js"></script>
 	</body>
 </html>
